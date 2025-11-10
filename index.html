@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablero Kanban</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js" defer></script>
+</head>
+
+<body>
+    <h1>Tablero Kanban</h1>
+    <div class="contenedorTablero">
+        <div class="columna" id="porHacer">
+            <h2>Por hacer</h2>
+            <div class="tarjeta" id="tarjetaPorHacer">
+                <input type="text" class="inputTarjeta" id="inputPorHacer" placeholder="Introduce un título">
+                <button class="botonAgregarTarjeta" id="botonPorHacer">Añadir tarjeta</button>
+            </div>
+        </div>
+
+        <h2>En progreso</h2>
+        <div class="tarjeta" id="tarjetaEnProgreso">
+            <input type="text" class="inputTarjeta" id="inputEnProgreso" placeholder="Introduce un título">
+            <button class="botonAgregarTarjeta" id="botonEnProgreso">Añadir tarjeta</button>
+        </div>
+
+        <h2>Hecho</h2>
+        <div class="tarjeta" id="tarjetaHecho">
+            <input type="text" class="inputTarjeta" id="inputHecho" placeholder="Introduce un título">
+            <button class="botonAgregarTarjeta" id="botonHecho">Añadir tarjeta</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
