@@ -6,34 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tablero Kanban</title>
     <link rel="stylesheet" href="style.css">
-    <script type="module" src="script.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
     <h1>Tablero Kanban</h1>
-    <div class="contenedorTablero">
-        <div class="columna" id="porHacer">
+
+    <div id="ContenedorTablero">
+
+        <!-- COLUMNA POR HACER -->
+
+        <section class="columna">
+
             <h2>Por hacer</h2>
-            <div class="tarjeta" id="tarjetaPorHacer">
-                <input type="text" class="inputTarjeta" id="inputPorHacer" placeholder="Introduce un título">
-                <button class="botonAgregarTarjeta" id="botonPorHacer">Añadir tarjeta</button>
+
+            <div class="contenedorTarjetas"></div>
+
+            <button class="botonAgregarTarjeta">+ Añadir una tarjeta</button>
+
+            <div class="contenedorNuevaTarjeta hidden">
+
+                <input type="text" class="inputTarjeta">
+                <button class="botonGuardar">Añadir tarjeta</button>
+                <button class="botonCancelar">X</button>
+
             </div>
-        </div>
 
-        <h2>En progreso</h2>
-        <div class="tarjeta" id="tarjetaEnProgreso">
-            <input type="text" class="inputTarjeta" id="inputEnProgreso" placeholder="Introduce un título">
-            <button class="botonAgregarTarjeta" id="botonEnProgreso">Añadir tarjeta</button>
-        </div>
+        </section>
 
-        <h2>Hecho</h2>
-        <div class="tarjeta" id="tarjetaHecho">
-            <input type="text" class="inputTarjeta" id="inputHecho" placeholder="Introduce un título">
-            <button class="botonAgregarTarjeta" id="botonHecho">Añadir tarjeta</button>
-        </div>
+        <!-- COLUMNA EN PROGRESO -->
+
+        <section class="columna">
+
+            <h2>En progreso</h2>
+
+            <div class="contenedorTarjetas"></div>
+
+            <button class="botonAgregar">+ Añadir una tarjeta</button>
+
+            <div class="contenedorNuevaTarjeta hidden">
+
+                <input type="text" class="inputTarjeta">
+                <button class="botonGuardar">Añadir tarjeta</button>
+                <button class="botonCancelar">X</button>
+
+            </div>
+
+
+        </section>
+
+        <!-- COLUMNA HECHO -->
+
+        <section class="columna" id="hecho">
+
+            <h2>Hecho</h2>
+
+            <div class="contenedorTarjetas"></div>
+
+            <button class="botonAgregar">+ Añadir una tarjeta</button>
+
+            <div class="contenedorNuevaTarjeta hidden">
+
+                <input type="text" class="inputTarjeta">
+                <button class="botonGuardar">Añadir tarjeta</button>
+                <button class="botonCancelar">X</button>
+
+            </div>
+
+        </section>
 
     </div>
-
 </body>
 
 </html>

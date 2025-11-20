@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(123, 123, 255);
+}
+
+.hidden {
+    display: none;
+}
+
+#kanbanBoard {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.kanbanColumna {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 10px;
+    width: 300px;
+}
