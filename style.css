@@ -4,25 +4,79 @@
     box-sizing: border-box;
 }
 
+:root {
+    --color-principal: #3C1B59;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(123, 123, 255);
+    background-color:var(--color-principal);
 }
 
 .hidden {
     display: none;
 }
 
-#kanbanBoard {
+#contenedorTablero {
     display: flex;
     justify-content: center;
     gap: 20px;
     padding: 20px;
 }
 
-.kanbanColumna {
+h1 {
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    background-color: #E8D9F5;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.columna {
     background-color: #f0f0f0;
     border-radius: 5px;
     padding: 10px;
+    min-width: 300px;
+}
+
+.botonAgregarTarjeta {
+    border: none;
+    margin: 20px 0 20px 0;
+}
+
+.contenedorBotones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.botonGuardar {
+    width: 130px;
+    background-color: #E6007A;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.botonGuardar:hover {
+    background-color: #A30056;
+}
+
+.botonCancelar {
+    border: none;
+    font-size: 25px;
+}
+
+.botonCancelar:hover {
+    background-color:  #E8D9F5;
+}
+
+.textareaTarjeta {
     width: 300px;
+    margin: 15px 0 0 0;
 }
