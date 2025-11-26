@@ -21,7 +21,8 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding: 20px;
+    margin-top: 20px;
+    align-items: flex-start;
 }
 
 h1 {
@@ -31,7 +32,7 @@ h1 {
 
 h2 {
     text-align: center;
-    background-color: #E8D9F5;
+    background-color: #cab3df;
     border-radius: 5px;
     padding: 5px;
     border: 1px solid black;
@@ -41,13 +42,29 @@ h2 {
     background-color: #f0f0f0;
     border-radius: 5px;
     padding: 10px;
+    width: 300px;
     min-width: 300px;
+    height: fit-content;  
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .botonAgregarTarjeta {
     border: none;
-    margin: 20px 0 20px 0;
+    width: 100%;
+    padding: 10px 0 10px 10px;
+    text-align: left;
+    background-color: transparent;
+    transition: background-color 0.5s ease, 
+              color 0.2s ease;
 }
+
+.botonAgregarTarjeta:hover {
+    background-color: #cab3df;
+    color: #3C1B59;
+}
+
 
 .contenedorBotones {
     display: flex;
@@ -73,10 +90,30 @@ h2 {
 }
 
 .botonCancelar:hover {
-    background-color:  #E8D9F5;
+    background-color:  #cab3df;
 }
 
 .textareaTarjeta {
-    width: 300px;
+    width: 100%;
     margin: 15px 0 0 0;
+    box-sizing: border-box;
+}
+
+.tarjeta {
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 10px;
+    overflow-wrap: break-word;
+}
+
+.tarjeta:hover {
+    background-color: #cab3df;
+}
+
+.contenedorTarjetas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height:30px; 
+    width: 100%;
 }
