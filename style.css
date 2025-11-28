@@ -56,6 +56,7 @@ h2 {
     padding: 10px 0 10px 10px;
     text-align: left;
     background-color: transparent;
+    border-radius: 8px;
     transition: background-color 0.5s ease, 
               color 0.2s ease;
 }
@@ -104,10 +105,15 @@ h2 {
     border: 1px solid black;
     padding: 10px;
     overflow-wrap: break-word;
+    position: relative;
 }
 
 .tarjeta:hover {
     background-color: #cab3df;
+}
+
+.tarjeta:hover .botonEliminar {
+    opacity: 1;
 }
 
 .contenedorTarjetas {
@@ -116,4 +122,27 @@ h2 {
     gap: 10px;
     min-height:30px; 
     width: 100%;
+}
+
+.botonEliminar {
+    border: none;
+    font-size: 25px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.botonEliminar:hover {
+    background-color: #9870be;
+}
+
+.tarjeta p {
+    padding-right: 25px;
+    transition: transform 0.2s ease;
+}
+
+.tarjeta:hover p {
+    transform: translateX(5px);
 }

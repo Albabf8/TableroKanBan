@@ -38,19 +38,35 @@ columnas.forEach(columna => {
 
         // Asignar el atributo draggable para poder arrastrarla
         nuevaTarjeta.setAttribute('draggable', 'true');
-        nuevaTarjeta.textContent = textareaTarjeta.value;
         
         // Asignar los eventos de arrastre a ESTA nueva tarjeta
         nuevaTarjeta.addEventListener('dragstart', DragStartElemento);
         nuevaTarjeta.addEventListener('dragend', DragEndElemento);
 
-        contenedorTarjetas.appendChild(nuevaTarjeta);
-
-        contenedorNuevaTarjeta.classList.add('hidden');
-        botonAgregarTarjeta.classList.remove('hidden');
+        // Creamos un párrafo 
+        const parrafoTexto = document.createElement('p');
+        
+        // Le metemos el texto que escribió el usuario
+        parrafoTexto.innerText = textareaTarjeta.value;
+        
+        // Metemos el párrafo DENTRO de la tarjeta
+        nuevaTarjeta.appendChild(parrafoTexto);
 
         // Vaciamos el textarea una vez creada la tarjeta porque si no el texto se queda guardado en el textarea 
         textareaTarjeta.value = '';
+
+        const botonEliminar = document.createElement('button');
+        botonEliminar.classList.add('botonEliminar');
+
+        botonEliminar.innerHTML = '<i class="bx bx-x"></i>';
+        
+        botonEliminar.addEventListener('click', () => {
+          nuevaTarjeta.remove();
+        });
+        nuevaTarjeta.appendChild(botonEliminar);
+
+        contenedorTarjetas.appendChild(nuevaTarjeta);
+
     });
 
     // Evento para el boton de cancelar
@@ -87,7 +103,6 @@ function DragEndElemento(evento) {
 }
 
 
-
 // preventDefault se debe poner al menos en los siguientes eventos por ser estos los que permiten que la zona de destino reaccione al arrastre
 function DragEnterElemento(evento) {
   evento.preventDefault();
@@ -96,7 +111,3 @@ function DragEnterElemento(evento) {
 function DragOverElemento(evento) {
   evento.preventDefault();
 }
-
-
-
-
